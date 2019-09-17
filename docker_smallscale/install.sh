@@ -24,6 +24,10 @@ apt-get -y update
 apt-get -y install docker-ce
 
 # Install MariaDB
+apt-get install software-properties-common
+apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
+add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://mirror.one.com/mariadb/repo/10.4/debian jessie main'
+apt-get -y update
 apt-get -y install mariadb-server
 
 # Install redis
